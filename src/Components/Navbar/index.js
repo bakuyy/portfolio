@@ -1,14 +1,19 @@
 import React from 'react'
 import {Nav,NavMenu,NavBtn,NavBtnLink} from './NavbarElements'
+import { GoThreeBars } from "react-icons/go";
+import {IconContext} from "react-icons";
 
 const Navbar = () => {
   return (
     <>
     <Nav>
+        <IconContext.Provider value = {{className: "shared-class", color: '#4599F7', size: 56}}>
+            <GoThreeBars/>
+        </IconContext.Provider>
         <NavMenu>
         
         <NavBtn>
-            <NavBtnLink to='/About' className ="text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-600 p-2 lg:px-4 rounded-lg duration-300 transition-colors text-center">
+            <NavBtnLink to='/About'>
                 About Me
             </NavBtnLink>
             <NavBtnLink to='/Projects'>
