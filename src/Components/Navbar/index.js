@@ -1,15 +1,24 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Nav,NavMenu,NavBtn,NavBtnLink} from './NavbarElements'
 import { GoThreeBars } from "react-icons/go";
 import {IconContext} from "react-icons";
 
 const Navbar = () => {
+    const [showDropDown, setShowDropdown] = useState(false)
+
   return (
     <>
     <Nav>
-        <IconContext.Provider value = {{className: "shared-class", color: '#4599F7', size: 56}}>
-            <GoThreeBars/>
-        </IconContext.Provider>
+        <NavBtn
+            onClick={
+        () => {
+            setShowDropdown(!showDropDown);
+        }}
+        >
+            <IconContext.Provider value = {{className: "shared-class", color: '#4599F7', size: 56}}>
+                <GoThreeBars/>
+            </IconContext.Provider>
+        </NavBtn>
         <NavMenu>
         
         <NavBtn>
