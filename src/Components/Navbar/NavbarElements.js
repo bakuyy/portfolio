@@ -18,7 +18,7 @@ export const NavMenu = styled.div`
   align-items: center;
   margin-right: -24px;
   white-space: nowrap; 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 1024px) {
     display: none;
   }
 `;
@@ -27,9 +27,6 @@ export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
   margin-right: 24px;
-  @media screen and (max-width: 780px) {
-    display: none;
-  }
   padding-right: 20px;
 `;
 
